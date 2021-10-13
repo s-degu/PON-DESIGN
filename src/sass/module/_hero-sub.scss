@@ -1,0 +1,39 @@
+.l-hero--sub {
+  padding-top: $header-height-sp;
+  width: 100%;
+  height: rem(190);
+  background-image: url(/assets/images/hero-sub-sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @include mq("md") {
+    padding-top: $header-height-pc;
+    background-image: url(/assets/images/hero-sub-pc.jpg);
+    height: rem(240);
+  }
+}
+
+.l-hero__title--sub {
+  color: $white;
+  font-size: rem(30);
+  text-align: center;
+  font-family: $second-font-family;
+  padding-top: rem(30);
+  position: relative;
+  @include mq("md") {
+    font-size: rem(36);
+    // line-height: rem(98);
+    padding-top: rem(10);
+  }
+  &::after {
+    position: absolute;
+    font-family: $base-font-family;
+    display: block;
+    content: "お知らせ";
+    // width: 100%;
+    bottom: rem(-16);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: rem(13);
+  }
+}

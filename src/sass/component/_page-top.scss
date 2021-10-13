@@ -1,0 +1,36 @@
+.c-page-top {
+  position: fixed;
+  right: rem(20);
+  bottom: rem(20);
+  width: rem(50);
+  height: rem(50);
+  background-color: $color-page-top-bg;
+  border-radius: 100%;
+  @include mq("md") {
+    bottom: rem(46);
+    right: rem(45);
+  }
+}
+
+.c-page-top__link {
+  width: rem(50);
+  height: rem(50);
+  display: block;
+  position: relative;
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f062";
+    font-size: rem(19);
+    color: $white;
+    position: absolute;
+    width: rem(25);
+    height: rem(25);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 8px auto 0;
+    text-align: center;
+  }
+}

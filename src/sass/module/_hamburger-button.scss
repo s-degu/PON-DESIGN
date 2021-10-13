@@ -1,0 +1,45 @@
+.m-hamburger {
+  position: relative;
+  width: rem(34);
+  height: rem(17);
+  margin-left: auto;
+  z-index: $layer-drawer;
+}
+
+.m-hamburger--button {
+  position: absolute;
+  width: rem(31);
+  height: rem(1);
+  left: 0;
+  background-color: $white;
+  display: block;
+  z-index: 20;
+  transition: all 0.3s ease;
+  &:first-of-type {
+    top: 0;
+  }
+  &:nth-of-type(2) {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  &:last-of-type {
+    bottom: 0;
+  }
+}
+
+.m-hamburger.is-active {
+  .m-hamburger--button {
+    &:first-of-type {
+      transform: rotate(45deg);
+      top: rem(7)
+    }
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+    &:last-of-type {
+      top: rem(7);
+      transform: rotate(-45deg);
+    }
+  }
+}

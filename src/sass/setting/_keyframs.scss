@@ -1,0 +1,35 @@
+//ヒーローエリアのスクロールバー設定用
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: rem(50);
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+    top: rem(80);
+  }
+}
+
+@keyframes pathmove-sp {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: rem(20);
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+    top: rem(50);
+  }
+}

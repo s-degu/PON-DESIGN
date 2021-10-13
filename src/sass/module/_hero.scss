@@ -1,0 +1,110 @@
+.l-hero {
+  padding-top: $header-height-sp;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/images/hero-sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    padding-top: $header-height-pc;
+    background-image: url(/assets/images/hero.jpg);
+  }
+}
+
+.l-hero__wrap {
+  position: relative;
+  color: $white;
+  @include mq("md") {
+    text-align: center;
+  }
+}
+
+.l-hero__title {
+  font-family: $second-font-family;
+  font-size: rem(48);
+  line-height: rem(62);
+  padding-left: rem(31);
+
+  @include mq("md") {
+    font-size: rem(72);
+    line-height: rem(90);
+    padding-left: 0;
+  }
+}
+
+.l-hero__sub-title {
+  font-weight: $bold;
+  letter-spacing: 0.108em;
+  margin-top: rem(20);
+  line-height: rem(29);
+  padding-left: rem(36);
+  @include mq("md") {
+    font-size: rem(24);
+    padding-left: 0;
+  }
+}
+
+.l-hero__link {
+  margin-top: rem(50);
+  padding-left: rem(32);
+  @include mq("md") {
+    padding-left: 0;
+  }
+}
+
+.l-hero__scroll {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  // right: rem(22);
+  right: rem(35);
+  // bottom: rem(89.5);
+  bottom: rem(0);
+  /*全体の高さ*/
+  height: rem(50);
+  color: $white;
+  @include mq("md") {
+    height: rem(80);
+  }
+  &::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    left: rem(15);
+    /*線の形状*/
+    width: 1px;
+    height: 30px;
+    background: $white;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove-sp 1.4s ease-in-out infinite;
+    @include mq("md") {
+      animation: pathmove 1.4s ease-in-out infinite;
+    }
+    opacity: 0;
+    @include mq("md") {
+      left: rem(5);
+    }
+  }
+  span {
+    /*描画位置*/
+    position: absolute;
+    top: rem(-62);
+    left: rem(7);
+    font-family: $second-font-family;
+    font-size: rem(12);
+    font-weight: $bold;
+    display: inline-block;
+    writing-mode: vertical-rl;
+    @include mq("md") {
+      top: rem(-63);
+      left: rem(-2);
+    }
+    /*テキストの形状*/
+    color: $white;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+}

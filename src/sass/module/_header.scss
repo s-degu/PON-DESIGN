@@ -1,0 +1,112 @@
+$header-height-pc: 90px;
+$header-height-sp: 60px;
+
+
+.l-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+  transition: background-color none;
+  z-index: $layer-header;
+  // background-color: rgba(33, 5, 77, 0.6);
+}
+
+.l-header__bg-color--change {
+  background-color: $color-header-bg;
+}
+
+.l-inner__header {
+  padding-top: rem(6);
+  padding-left: rem(15);
+  padding-right: rem(18);
+  height: rem(60);
+  @include mq("md") {
+    padding-top: 0;
+    padding-right: 0;
+    // padding-top: rem(22);
+    height: $header-height-pc;
+    padding-left: rem(30);
+    padding-right: rem(30);
+  }
+}
+
+.l-header__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.l-header__logo {
+  // padding-top: rem(22);
+  img {
+    width: rem(124);
+    @include mq("md") {
+      width: 100%;
+    }
+  }
+  a {
+    display: block;
+  }
+}
+
+.l-header__nav {
+  display: none;
+  @include mq("md") {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.l-header__nav--list {
+  display: flex;
+  font-size: rem(15);
+  font-weight: $bold;
+}
+
+.l-header__nav--item {
+  & + & {
+    margin-left: rem(25);
+  }
+}
+
+.l-header__nav--link {
+  display: block;
+  line-height: $header-height-pc;
+  font-family: $second-font-family;
+  color: $white;
+  letter-spacing: 0.06em;
+}
+
+//ドロワーメニュー表示用のCSS
+.l-header__nav.is-show {
+  opacity: 1;
+  display: block;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $layer-drawer;
+  transition: all 2s linear;
+  .l-header__nav--list {
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .l-header__nav--item {
+    &:not(:first-of-type) {
+      margin-left: 0;
+      margin-top: rem(20);
+    }
+  }
+
+  .l-header__nav--link {
+    line-height: rem(15);
+  }
+}

@@ -1,0 +1,34 @@
+.m-breadcrumb {
+  background-color: $breadcrumb-bg;
+}
+
+.m-breadcrumb__list {
+  display: flex;
+  @include mq("md") {
+    padding: rem(13) 0;
+  }
+}
+
+.m-breadcrumb__item {
+  display: flex;
+  align-items: center;
+  &:not(:last-of-type) {
+    &::after {
+      content: ">";
+      padding: 0 rem(7);
+      @include mq("md") {
+        font-size: rem(12);
+        padding: 0 rem(10);
+      }
+    }
+  }
+}
+
+.m-breadcrumb__link {
+  display: block;
+  font-size: rem(11);
+  font-family: $second-font-family;
+  @include mq("md") {
+    font-size: rem(12);
+  }
+}

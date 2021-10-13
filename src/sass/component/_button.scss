@@ -1,0 +1,41 @@
+.c-button {
+  display: inline-block;
+  width: rem(220);
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+  border: rem(1) solid $white;
+  border-radius: rem(50);
+  font-family: $second-font-family;
+  font-size: rem(15);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.c-button--bg-purple {
+  @extend .c-button;
+  width: rem(200);
+  background: linear-gradient(to right, #7633a4, #250d65);
+  border: none;
+  text-align: center;
+  color: $white;
+  font-size: rem(14);
+  font-weight: $bold;
+}
+
+.c-button--news {
+  display: inline-block;
+  width: rem(82);
+  text-align: center;
+  background-color: $gray;
+  padding: rem(4);
+  font-family: $second-font-family;
+  border-radius: rem(50);
+  font-weight: $bold;
+  font-size: rem(11);
+  letter-spacing: 0.05em;
+  @include mq("md") {
+    padding-top: rem(5);
+    padding-bottom: rem(5);
+    font-size: rem(12);
+  }
+}

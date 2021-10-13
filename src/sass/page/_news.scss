@@ -1,0 +1,31 @@
+.news__sub {
+  @include mq("md") {
+    margin-top: rem(59);
+  }
+}
+
+.news-sub__list {
+  margin-top: rem(38);
+}
+
+.news-sub__item {
+  @include mq("md") {
+    display: flex;
+    align-items: flex-start;
+    margin-left: rem(3);
+  }
+  & + & {
+    margin-top: rem(21);
+    @include mq("md") {
+      margin-top: rem(9);
+    }
+  }
+}
+
+.contact.contact--sub {
+  margin-top: rem(79);
+  @include mq("md") {
+    margin-top: rem(109);
+    padding-top: 74px;
+  }
+}

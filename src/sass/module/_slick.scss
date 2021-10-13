@@ -1,0 +1,14 @@
+.slick-dots {
+  bottom: rem(-25);
+  @include mq("md") {
+    bottom: rem(-32);
+  }
+}
+
+.slick-dots li {
+  margin: 0 rem(-2.5);
+}
+
+.slick-dots li button:before {
+  font-size: rem(51);
+}

@@ -1,0 +1,14 @@
+
+/* FontFamily */
+$base-font-family: "Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+$second-font-family: "Montserrat","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+
+body {
+  font-family: $base-font-family;
+  color: $color-font-base;
+}
+
+/* font-weight */
+$regular: 300;
+$normal: 400;
+$bold: 700;

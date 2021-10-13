@@ -1,0 +1,85 @@
+//グローバルナビゲーションのアンダーライン
+.u-hover-underline {
+  position: relative;
+  // z-index: 10;
+  &::after {
+    @include mq("md") {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: rem(32);
+      left: 0;
+      width: 0;
+      height: rem(2);
+      background-color: $white;
+      transition: all 0.4s ease;
+      // z-index: -1;
+    }
+  }
+  &:hover {
+    &::after {
+      @include mq("md") {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//コンタクトボタン
+.c-button--hover {
+  transition: all 0.3s ease;
+  &:hover,
+  &:active {
+    @include mq("md") {
+      background-color: $white;
+      color: $main-color;
+    }
+  }
+}
+
+//MOREボタン
+.c-button--bg-purple {
+  transition: all 0.3s ease;
+  &:hover,
+  &:active {
+    @include mq("md") {
+      opacity: 1;
+      background: linear-gradient(to right, #4b3e6d, #7633a4);
+    }
+  }
+}
+
+// .news__item--link {
+//   position: relative;
+//   &::after {
+//     @include mq("md") {
+//       position: absolute;
+//       bottom: rem(1);
+//       left: 0;
+//       content: "";
+//       width: 100%;
+//       height: rem(1);
+//       background: #333;
+//       opacity: 0;
+//       visibility: hidden;
+//       transition: 0.3s;
+//     }
+//   }
+//   &:hover {
+//     &::after {
+//       @include mq("md") {
+//         bottom: rem(-2);
+//         opacity: 1;
+//         visibility: visible;
+//       }
+//     }
+//   }
+// }
+
+.m-page-nation__button {
+  transition: all, 0.3s;
+  &:hover {
+    color: $color-page-nation-current-text;
+    background-color: $color-page-nation-current;
+  }
+}
